@@ -4,6 +4,7 @@ class Solution:
         col = len(image[0])
         mainColor = image[sr][sc]
         def dfs (r, c):
+            # image[r][c] == color is needed to prevent loop
             if r<0 or c<0 or r>row-1 or c>col-1 or image[r][c] == color or image[r][c]!=mainColor:
                 return
             image[r][c] = color
