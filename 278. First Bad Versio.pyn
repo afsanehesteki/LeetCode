@@ -1,3 +1,6 @@
+# The isBadVersion API is already defined for you.
+# def isBadVersion(version: int) -> bool:
+
 class Solution:
     def firstBadVersion(self, n: int) -> int:
         res= n 
@@ -11,3 +14,20 @@ class Solution:
             else:
                 l=mid+1
         return res   
+
+        # Recursive approach is WRONG . Time limit excedd error     
+        # res = n
+        #def bs(l,r):
+        #    nonlocal res
+         #   mid= (l+r)//2
+          #  if l>r:
+           #     return
+            #if isBadVersion(mid) == True:
+             #   res= min(mid , res)
+            #bl = bs(l, mid-1)
+            #br = bs(mid+1 , r)
+        #bs(1 , n)
+        #return res
+        
+
+        
