@@ -1,0 +1,13 @@
+class Solution:
+    def firstBadVersion(self, n: int) -> int:
+        res= n 
+        l= 1
+        r=n
+        while l<=r:
+            mid = (l+r)//2
+            if isBadVersion(mid) == True:
+               res= mid # OR res= min(mid , res) . We don't really need min(), since mid is always smaller then r
+               r= mid-1
+            else:
+                l=mid+1
+        return res   
