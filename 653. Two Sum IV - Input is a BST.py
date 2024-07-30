@@ -13,9 +13,11 @@ class Solution:
             if (k - node.val) in myset:
                 return True
             myset.add(node.val)
-            tl = traverse(node.left) 
-            tr = traverse(node.right)
-            if tl ==True or tr==True:
-                return True
+            # tl = traverse(node.left) 
+            # tr = traverse(node.right)
+            # if tl ==True or tr==True:
+            #     return True
+            return traverse(node.left) or traverse(node.right)
 
-        return  traverse(root) ==True
+        return  traverse(root)
+
