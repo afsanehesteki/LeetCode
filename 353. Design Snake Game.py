@@ -7,9 +7,10 @@ class SnakeGame:
         self.width = width
         self.food= food
     def move(self, direction: str) -> int:
-        head =  self.queue[-1] #pick righmost (head) of the queue without deleting it
-        head_r = head[0]  
-        head_c= head[1]
+        # head =  self.queue[-1] #pick righmost (head) of the queue without deleting it
+        # head_r = head[0]  
+        # head_c= head[1]
+        head_r, head_c =  self.queue[-1] #pick righmost (head) of the queue without deleting it
         if direction == 'U':
             head_r-=1
         elif direction == 'D':
@@ -34,8 +35,4 @@ class SnakeGame:
             else:
              self.queue.append([head_r, head_c])
 
-           return self.score
-        
-# Your SnakeGame object will be instantiated and called as such:
-# obj = SnakeGame(width, height, food)
-# param_1 = obj.move(direction)
+        return self.score
