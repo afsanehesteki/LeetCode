@@ -2,7 +2,7 @@ class SnakeGame:
 
     def __init__(self, width: int, height: int, food: List[List[int]]):
         self.score = 0
-        self.queue = collections.deque([(0,0)])
+        self.queue = collections.deque([[0,0]])
         self.height = height
         self.width = width
         self.food= food
